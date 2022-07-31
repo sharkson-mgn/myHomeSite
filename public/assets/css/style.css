@@ -27,8 +27,8 @@ body,html {
 .color-block {
   display: block;
   position: absolute;
-  width: 50vw;
-  height: 50vh;
+  width: 50%;
+  height: 50%;
 }
 
 .color-block.orange {
