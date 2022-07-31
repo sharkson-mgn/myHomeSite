@@ -1,0 +1,104 @@
+
+body,html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto';
+  overflow: hidden;
+}
+
+#body
+{
+	background-color: #ACE1AF;
+	height: 100%;
+	width: 100%;
+}
+
+#body > ul {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+.color-block {
+  display: block;
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+}
+
+.color-block.orange {
+	background-color: #FFB347;
+}
+.color-block.yellow {
+	background-color: #FDFD96;
+  right: 0;
+}
+.color-block.green {
+	background-color: #77DD77;
+	right: 0;
+  bottom: 0;
+}
+.color-block.purple {
+	background-color: #B19CD9;
+	left: 0;
+	top: 50%;
+}
+
+.menu-pos
+{
+	position: relative;
+	font-size: 10vmin;
+  display: block;
+	text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.menu-text {
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  text-shadow: 0 0 1px black;
+  color: black;
+  opacity: 1;
+  font-size: 1em;
+}
+
+.menu-text img {
+  height: 1em;
+}
+
+#logo
+{
+	position: absolute;
+  top: 37.8vh;
+  left: 50%;
+	font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+	font-size: 8vh;
+  text-shadow:0 0 1vh #333;
+  color: white;
+}
+
+#logo > span {
+  position: relative;
+  left: -50%;
+  z-index: 10;
+}
+
+#sublogo
+{
+	position: absolute;
+	border: 0px grey solid;
+	display: block;
+  font-size: 0.25em;
+  bottom: -0.5em;
+  right: 1.3em;
+}

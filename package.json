@@ -1,0 +1,32 @@
+{
+  "name": "homesite2.0",
+  "version": "1.0.0",
+  "description": "My homestie 2.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode=development",
+    "build": "webpack --mode=production",
+    "dev": "npm run development",
+    "development": "webpack --mode=development",
+    "watch": "webpack --watch --progress --mode=production"
+  },
+  "author": "Sharkson",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^4.5.7",
+    "html-webpack-plugin": "^5.5.0",
+    "jquery": "^3.6.0",
+    "jqueryui": "^1.11.1",
+    "sass": "^1.54.0"
+  }
+}
