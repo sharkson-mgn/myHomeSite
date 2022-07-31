@@ -2,6 +2,19 @@ import('jqueryui');
 
 var _app_ = function(){
 
+  this.oryg = null;
+  var that = this;
+
+  if (this.oryg === null) {
+    this.oryg = $('body').clone();
+  }
+
+  this.restore = function() {
+    if ($('.color-block:eq(0)').is(':animated') !== true) {
+      $('body').replaceWith(this.oryg);
+    }
+  }
+
   function hasAttr(el,a) {
     let attr = $(el).attr(a);
     return (typeof attr !== 'undefined' && attr !== false) ? attr : false;
@@ -42,8 +55,10 @@ var _app_ = function(){
     		$('#sublogo').animate({opacity:0},400);
     		$('#logo').delay(200).animate({opacity:0},200);
     		var url = $(this).attr('href');
-    		setTimeout(function(){location.href=url;},1000);
-    			return false;
+    		setTimeout(function(){
+          location.href=url;
+        },1000);
+    		return false;
     	});
   }
 
@@ -105,12 +120,10 @@ var _app_ = function(){
 
   introAnim();
 
+  window.onpageshow = function() {
+      this.restore();
+  };
+
 };
 
-$(document).ready(function() {
-  _app_();
-});
-
-window.onpageshow = function() {
-  _app_();
-};
+_app_();
