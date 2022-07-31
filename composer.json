@@ -1,0 +1,19 @@
+{
+    "name": "sharkson-mgn/homesite2.0",
+    "description": "My homepage 2.0",
+    "type": "project",
+    "require": {
+        "components/jquery": "3.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SharksonMgn\\Homesite20\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sharkson",
+            "email": "admin@sharkson.eu"
+        }
+    ]
+}
