@@ -10,8 +10,20 @@ var _app_ = function(){
   }
 
   this.restore = function() {
-    if ($('.color-block:eq(0)').is(':animated') !== true && this.oryg !== null) {
+    var anyAnimate = false;
+    $('.color-block').each(function() {
+      if ($(this).is(':animated')) {
+        anyAnimate = true;
+      }
+    });
+    if (anyAnimate !== true && this.oryg !== null) {
       $('body').replaceWith(this.oryg);
+      $('#body').css({
+        opacity: 0,
+      });
+      $('#body').animate({
+        opacity: 1,
+      },300,'linear');
     }
   }
 
@@ -20,13 +32,15 @@ var _app_ = function(){
     return (typeof attr !== 'undefined' && attr !== false) ? attr : false;
   }
 
-  $('.menu-text').each(function() {
-    let img = hasAttr(this,'img-replacement');
-    if (img !== false) {
-      $(this).attr('alt',$(this).text());
-      $(this).html('<img src="'+img+'" />');
-    }
-  });
+  this.replaceImages = function () {
+    $('.menu-text').each(function() {
+      let img = hasAttr(this,'img-replacement');
+      if (img !== false) {
+        $(this).attr('alt',$(this).text());
+        $(this).html('<img src="'+img+'" />');
+      }
+    });
+  }
 
   function registerActions () {
       $('.menu-pos').mouseenter(function(event) {
@@ -67,6 +81,8 @@ var _app_ = function(){
   var delay = 300;
 
   function introAnim () {
+
+    this.replaceImages();
 
     setTimeout(function() {
       registerActions();
