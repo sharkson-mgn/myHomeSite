@@ -1,4 +1,5 @@
-import('jqueryui');
+
+require('jqueryui');
 
 var _app_ = function(){
 
