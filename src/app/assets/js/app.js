@@ -10,7 +10,7 @@ var _app_ = function(){
   }
 
   this.restore = function() {
-    if ($('.color-block:eq(0)').is(':animated') !== true) {
+    if ($('.color-block:eq(0)').is(':animated') !== true && this.oryg !== null) {
       $('body').replaceWith(this.oryg);
     }
   }
@@ -121,7 +121,9 @@ var _app_ = function(){
   introAnim();
 
   window.onpageshow = function() {
-      this.restore();
+    setTimeout(() => {
+        that.restore();
+    },1);
   };
 
 };
