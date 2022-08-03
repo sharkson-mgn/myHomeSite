@@ -33,31 +33,27 @@ body,html {
 }
 
 .color-block.init-anim {
-  -webkit-animation: AnimLogoInit 1s forwards;
-  -moz-animation: AnimLogoInit 1s forwards;
-  animation: AnimLogoInit 1s forwards;
+  -webkit-animation: AnimLogoInit 0.5s forwards;
+  -moz-animation: AnimLogoInit 0.5s forwards;
+  animation: AnimLogoInit 0.5s forwards;
 }
 
 .color-block.stop-anim {
   -webkit-transition: none !important;
   -moz-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
 @-webkit-keyframes AnimLogoInit {
     0%{opacity: 0}
-    50%{opacity: 0}
     100%{opacity: 1}
 }
 @-moz-keyframes AnimLogoInit {
     0%{opacity: 0}
-    50%{opacity: 0}
     100%{opacity: 1}
 }
 @keyframes AnimLogoInit {
     0%{opacity: 0}
-    50%{opacity: 0}
     100%{opacity: 1}
 }
 
