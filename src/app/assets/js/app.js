@@ -63,16 +63,18 @@ var _app_ = function(){
     		$('.menu-pos').each(function(index){
     			$(this).delay(index*100).animate({opacity:0},100);
     		});
-    		$('.color-block.orange').delay(400).animate({top:'-50%',left:'-50%',opacity:0},400);
-    		$('.color-block.yellow').delay(400).animate({top:'-50%',right:'-50%',opacity:0},400);
-    		$('.color-block.green').delay(400).animate({bottom:'-50%',right:'-50%',opacity:0},400);
-    		$('.color-block.purple').delay(400).animate({top:'100%',left:'-50%',opacity:0},400);
+        $('.color-block').each(function(index){
+          let params = {opacity: 0};
+          params[(index < 2) ? 'top' : 'bottom'] = '-50%';
+          params[([1,2].includes(index)) ? 'right' : 'left'] = '-50%';
+          $(this).animate(params, 400);
+        });
     		$('#sublogo').animate({opacity:0},400);
     		$('#logo').delay(200).animate({opacity:0},200);
     		var url = $(this).attr('href');
     		setTimeout(function(){
           location.href=url;
-        },1000);
+        },400);
     		return false;
     	});
   }
@@ -82,6 +84,8 @@ var _app_ = function(){
   var delay = 300;
 
   function introAnim () {
+
+    $('.init-anim').toggleClass('init-anim').toggleClass('stop-anim');
 
     this.replaceImages();
 
@@ -145,4 +149,6 @@ var _app_ = function(){
 
 };
 
-_app_();
+$('body').ready(function() {
+  _app_();
+});

@@ -9,7 +9,7 @@
     "build": "webpack --mode=production",
     "dev": "npm run development",
     "development": "webpack --mode=development",
-    "watch": "webpack --watch --progress --mode=production"
+    "watch": "webpack --watch --mode=development"
   },
   "author": "Sharkson",
   "license": "ISC",
