@@ -33,9 +33,9 @@ body,html {
 }
 
 .color-block.init-anim {
-  -webkit-animation: AnimLogoInit 0.5s forwards;
-  -moz-animation: AnimLogoInit 0.5s forwards;
-  animation: AnimLogoInit 0.5s forwards;
+  -webkit-animation: AnimLogoInit 1s forwards;
+  -moz-animation: AnimLogoInit 1s forwards;
+  animation: AnimLogoInit 1s forwards;
 }
 
 .color-block.stop-anim {
@@ -46,14 +46,17 @@ body,html {
 
 @-webkit-keyframes AnimLogoInit {
     0%{opacity: 0}
+    50%{opacity: 0}
     100%{opacity: 1}
 }
 @-moz-keyframes AnimLogoInit {
     0%{opacity: 0}
+    50%{opacity: 0}
     100%{opacity: 1}
 }
 @keyframes AnimLogoInit {
     0%{opacity: 0}
+    50%{opacity: 0}
     100%{opacity: 1}
 }
 
