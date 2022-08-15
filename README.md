@@ -9,6 +9,7 @@ Go and see for yourself: https://sharkson.eu/
 * CSS3
 * Composer
 * jQuery
+* Webpack
 
 ## Project assumptions
 * Responsive
